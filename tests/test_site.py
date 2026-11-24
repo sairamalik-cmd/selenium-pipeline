@@ -1,4 +1,3 @@
-cat > tests/test_site.py <<'EOF'
 import os
 import pytest
 from selenium import webdriver
@@ -34,4 +33,3 @@ def test_button_click_and_screenshot(driver):
     driver.find_element(By.ID, "btn").click()
     assert driver.find_element(By.ID, "message").text == "Button clicked"
     driver.save_screenshot("screenshot.png")
-EOF
